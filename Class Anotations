@@ -1,1 +1,57 @@
-Teste
+Uma tabela de Símbolos:
+
+-Armazena valores de constantes e valores de variáveis internas, visando geração de código intermediário.
+-Prove informações gerais sobre tipos de variáveis para ajudar a fase semântica e de geração de código intermediário.
+-Armazena informações sobre o nível das funções e seus parâmetros.
+-Armazena nomes de variáveis e funçõe.
+
+-NÃO armazena funções auxiliares de bibliotecas.
+-NÃO armazena endereços de memória.
+
+Fase de Análise de um processo de compilação:
+
+-Análise Léxica.
+-Análise Sintática.
+-Análise Semântica.
+
+Fase de Síntese de um processo de compilação:
+
+-Geração de Código Intermediário.
+-Otimização de Código.
+-Geração de Código Final.
+
+Sobre o Analisador Léxico:
+-Agrupa caracteres em itens léxicos chamados lexemas.
+-Agrupa os lexemas em um padrão, constituindo um token.
+-Detecta erros léxicos.
+-Le o programa fonte caracter por caracter.
+-Innora elementos sem valor sintático.
+-NÃO identifica caracteres especiais.
+-NÃO monta frases.
+-NÃO valida estruturas de controle.
+
+Sobre o Analisador Sintático:
+-Verifica se as estruturas correspondem às estruturas válidas na gramática da linguagem.
+-Identifica erros sintáticos.
+-Agrupa tokens em estruturas de "frase".
+-NÃO identifica erros do tipo "type mismtch".
+
+
+Interface de Vanguarda (front-end):
+-Dependem primariamente da linguagem.
+-Independentes da máquina alvo
+-NÃO innclui etapas de tabela de símbolos e tratamento de erros.
+
+Interface de Retaguarda (back-end):
+
+-Dependem da máquina alvo do código
+-Não dependem da linguagem fonte
+-Dependente do hardware
+-É possível ter, para uma mesma linguagem, diversos back-ends, para que um mesmo código seja executado em diferentes plataformas
+
+Sobre o Processo de Compilação:
+-Quanto maior o número de passos, mais tempo é gasto na compilação, mais complexo é o processo e maior é a quantidade de otimizações que podem ser feitas.
+
+O que é um passo no contexto de um processo de compilação?
+-Passagem completa do programa compilador sobre o programa fonte.
+
